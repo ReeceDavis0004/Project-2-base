@@ -7,6 +7,22 @@
     <title>JobConnect - Academic Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
+        :root {
+            --tt-red: #CC0000;
+            --background-color: #18191A;
+            --card-background: #242526;
+            --header-background: #242526;
+            --text-primary: #E4E6EB;
+            --text-secondary: #B0B3B8;
+            --border-color: #3A3B3C;
+
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+
+            --radius-md: 8px;
+            --radius-lg: 12px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,16 +31,11 @@
         }
 
         body {
-            background-color: #ffffff;
+            background-color: var(--background-color);
             color: #333;
             line-height: 1.6;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
 
         nav {
             display: flex;
@@ -32,7 +43,8 @@
             align-items: center;
             margin-bottom: 2rem;
             background-color: gray;
-            padding: 2px;
+            width: 100%;
+            padding: 4px;
         }
 
         .name-title {
@@ -48,8 +60,7 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #666;
-            transition: color 0.3s;
+            color: black;
         }
 
         .nav-links a:hover {
@@ -217,6 +228,140 @@
                 justify-content: center;
             }
         }
+
+
+        .app-header {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: var(--header-background);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            justify-self: start;
+            text-decoration: none;
+        }
+
+        .logo-container img {
+            height: 40px;
+        }
+
+        .nav-links-desktop {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            justify-self: center;
+        }
+
+        .nav-link {
+            padding: 0.5rem 0;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            white-space: nowrap;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .nav-link.active,
+        .nav-link:hover {
+            color: var(--tt-red);
+            border-bottom-color: var(--tt-red);
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            justify-self: end;
+        }
+
+        /* Mobile Stuff */
+        .menu-button-mobile {
+            display: none;
+            justify-self: end;
+            background: none;
+            border: 0;
+            padding: .25rem;
+            cursor: pointer;
+            line-height: 0;
+        }
+
+        .nav-links-mobile {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 250px;
+            padding: 1rem;
+            background-color: var(--header-background);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 var(--radius-md) var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-link-mobile-item {
+            display: block;
+            width: 100%;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-link-mobile-item:hover {
+            color: var(--tt-red);
+        }
+
+        .mobile-menu-btn {
+            width: 100%;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        @media (max-width: 1024px) {
+            .app-header {
+                padding: .75rem 1rem;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links-desktop,
+            .user-actions {
+                display: none;
+            }
+
+            .menu-button-mobile {
+                display: block;
+            }
+
+            .nav-links-mobile {
+                display: flex;
+            }
+
+            .logo-container {
+                font-size: 0.9rem;
+            }
+
+            .logo-container img {
+                height: 32px;
+            }
+        }
     </style>
 </head>
 
@@ -226,7 +371,7 @@
             <a href="index.html" class="name-title">JobConnect</a>
             <div class="nav-links">
                 <a href="projects.html">Projects</a>
-                <a href="files/Maaz_cv.pdf" target="_blank">CV</a>
+                <a href="files/Maaz_cv.pdf" target="_blank">Login</a>
             </div>
         </nav>
 
