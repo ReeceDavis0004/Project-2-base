@@ -7,10 +7,24 @@
     <title>Companies Page</title>
     <style>
 
-        :root {
-            --tt-red: #c00;
-            --background-color: #18191A
-        }
+       :root {
+           --tt-red: #CC0000;
+           --background-color: #18191A;
+           --card-background: #242526;
+           --header-background: #242526;
+           --text-primary: #E4E6EB;
+           --text-secondary: #B0B3B8;
+           --border-color: #3A3B3C;
+
+
+           --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+           --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+
+
+           --radius-md: 8px;
+           --radius-lg: 12px;
+       }
+
 
         body {
             margin: 0;
@@ -23,32 +37,157 @@
             margin: 2rem auto 0 auto;
             padding: 0 2rem
         }
+.page-header {
+           max-width: 1200px;
+           margin: 2rem auto 0 auto;
+           padding: 0 2rem;
+       }
+
+
+       .page-title {
+           color: var(--text-primary);
+           border-bottom: 2px solid var(--tt-red);
+           padding-bottom: 0.5rem;
+           font-size: 2rem;
+           font-weight: 700;
+       }
+
+
+       .grid-container {
+           display: grid;
+           grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+           gap: 1.5rem;
+           max-width: 1200px;
+           margin: 2rem auto;
+           padding: 0 2rem;
+       }
+
+
+       .card {
+           background-color: var(--card-background);
+           border-radius: var(--radius-lg);
+           box-shadow: var(--shadow-md);
+           overflow: hidden;
+           text-decoration: none;
+           color: var(--text-secondary);
+           display: flex;
+           flex-direction: column;
+           border: 1px solid var(--border-color);
+       }
+
+
+       .card.clickable {
+           cursor: pointer;
+           transition: transform 0.2s, box-shadow 0.2s;
+       }
+
+
+       .card.clickable:hover {
+           transform: translateY(-5px);
+           box-shadow: 0 8px 12px -2px rgb(0 0 0 / 0.4), 0 4px 8px -4px rgb(0 0 0 / 0.4);
+       }
+
+
+       .card-header {
+           display: flex;
+           align-items: center;
+           gap: 1rem;
+           padding: 1.5rem;
+           border-bottom: 1px solid var(--border-color);
+       }
+
+
+       .company-logo-sm {
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           object-fit: cover;
+           border: 2px solid var(--border-color);
+       }
+
+
+       .card-title {
+           font-size: 1.25rem;
+           font-weight: 600;
+           color: var(--text-primary);
+           margin: 0;
+       }
+
+
+       .card-subtitle {
+           font-size: 0.9rem;
+           margin: 0;
+           color: var(--text-secondary);
+       }
+
+
+       .card-body {
+           padding: 1.5rem;
+           flex-grow: 1;
+       }
+
+
+       .card-body p {
+           margin: 0;
+           line-height: 1.5;
+       }
+
+
+       .card-footer {
+           padding: 1rem 1.5rem;
+           border-top: 1px solid var(--border-color);
+           background-color: rgba(0, 0, 0, 0.1);
+           margin-top: auto;
+       }
+
+
+       .info-tag {
+           display: flex;
+           align-items: center;
+           gap: 0.5rem;
+           font-size: 0.9rem;
+       }
+
+
+       .info-tag svg {
+           width: 16px;
+           height: 16px;
+           stroke: var(--text-secondary);
+       }
+
     </style>
 
 </head>
 
 <body>
     <div class="container">
-        <div class="page-header">
-            <h1 class="page-title">Partner Companies</h1>
-                </div>
-            </h1></h1>
-        </div>
-        <a href="#" class="card clickable">
-            <div class="card-header">
-                <img src="ttu.png" class="company" alt="C1 company logo">
-                <div>
-                    <h3 class="card-title">placeholder</h3>
-                    <p class="card-subtitle">Technology</p>
-                </div>
-            </div>
-            <div class=="card-body">
-                <p>placeholder</p>
-            </div>
-
-                </div>
-            </div>
-
+       <div class="page-header">
+           <h1 class="page-title">Partner Companies</h1>
+       </div>
+       <div class="grid-container">
+           <a href="#" class="card clickable">
+               <div class="card-header">
+                   <img src="ttu.png" class="company-logo-sm" alt="Company 1 logo" />
+                   <div>
+                       <h3 class="card-title">Placeholder</h3>
+                       <p class="card-subtitle">Placeholder</p>
+                   </div>
+               </div>
+               <div class="card-body">
+                   <p>Placeholder Company Description</p>
+               </div>
+               <div class="card-footer">
+                   <div class="info-tag">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                           <circle cx="12" cy="10" r="3"></circle>
+                       </svg>
+                       <span>Lubbock, TX</span>
+                   </div>
+               </div>
+           </a>
+       </div>
     </div>
 </body>
 
