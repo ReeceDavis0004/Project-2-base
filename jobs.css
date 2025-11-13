@@ -18,6 +18,7 @@
       body {
         background-color: var(--background-color);
         font-family: 'Inter', sans-serif;
+        color: var(--text-primary)
       }
 
       .page-header {
@@ -82,4 +83,91 @@
 	justify-self: end;
     padding: 10px 15px;
     border-radius: 10px;
+}
+
+.job-select {
+    display: flex;
+    align-items: center;
+	justify-self: center;
+    padding: 20px;
+}
+
+.job-types {
+    background-color: var(--header-background);
+    margin-left: 25px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.All {
+    background-color: var(--header-background);
+    color: var(--text-primary);
+    font-size: 20px;
+    display: flex;
+    display: inline;
+	align-items: center;
+	gap: .5rem;
+	justify-self: end;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.Internships {
+    background-color: var(--header-background);
+    color: var(--text-primary);
+    font-size: 20px;
+    display: flex;
+    display: inline;
+	align-items: center;
+	gap: .5rem;
+	justify-self: end;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.Full-time {
+    background-color: var(--header-background);
+    color: var(--text-primary);
+    font-size: 20px;
+    display: flex;
+    display: inline;
+	align-items: center;
+	gap: .5rem;
+	justify-self: end;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.Part-time {
+    background-color: var(--header-background);
+    color: var(--text-primary);
+    font-size: 20px;
+    display: flex;
+    display: inline;
+	align-items: center;
+	gap: .5rem;
+	justify-self: end;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.All:hover {
+    background-color: var(--tt-red);
+    border-color: #990000;
+}
+
+.Internships:hover {
+    background-color: var(--tt-red);
+    border-color: #990000;
+}
+
+.Full-time:hover {
+    background-color: var(--tt-red);
+    border-color: #990000;
+}
+
+.Part-time:hover {
+    background-color: var(--tt-red);
+    border-color: #990000;
 }
