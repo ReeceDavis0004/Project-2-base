@@ -105,19 +105,12 @@
      font-size: 15px;
    }
 
-    .page-header {
-    	max-width: 1200px;
-    	margin: 2rem auto 0 auto;
-    	padding: 0 2rem;
-    }
-
-
     .page-title {
     	color: var(--text-primary);
-    	border-bottom: 2px solid var(--tt-red);
     	padding-bottom: 0.5rem;
-    	font-size: 2rem;
     	font-weight: 700;
+		align-items: center;
+     	justify-self: center;
     }
 
 
@@ -207,6 +200,28 @@
     	background-color: rgba(0, 0, 0, 0.1);
     	margin-top: auto;
     }
+
+	.pin {
+     float: left;
+     height: 20px;
+     width: 20px;
+     margin-top: auto;
+	 margin-bottom: auto;
+	 
+   }
+
+   .connect-button {
+		background-color: #3c3a3a;
+		color: var(--text-primary);
+		border: 1px solid var(--border-color);
+		display: flex;
+		margin-left: auto;
+		gap: .5rem;
+		justify-self: end;
+		padding: 10px 15px;
+		font-size: 20px;
+		border-radius: 10px;
+	}
 
 
     .login-button {
